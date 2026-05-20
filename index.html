@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福州佳势展览有限公司 - 专业展览展示解决方案提供商</title>
+    <meta name="description" content="福州佳势展览有限公司专注于展览设计、展台搭建、活动策划等服务，为客户提供一站式展览解决方案，凭借专业团队和丰富经验，打造高品质展览展示效果。">
+    <meta name="keywords" content="福州展览公司,展台设计,展览搭建,活动策划,佳势展览,展会布置,展厅设计">
+    <!-- 引入外部资源 -->
+    <script src="csjs/tailwindcss.js"></script>
+    <link href="csjs/awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="csjs/chart.umd.min.js"></script> 
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9CB93B',
+                        secondary: '#333333',
+                        accent: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .transition-transform {
+                transition-property: transform;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 300ms;
+            }
+            .hover-lift {
+                @apply hover:-translate-y-1 transition-all duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-secondary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-3xl mx-auto;
+            }
+            .section-divider {
+                @apply w-20 h-1 bg-primary mx-auto mb-6;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-light/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-12 md:h-14">
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium hover:text-primary/80 transition-colors">首页</a>
+                    <a href="about.html" class="text-secondary font-medium hover:text-primary transition-colors">关于我们</a>
+                    <a href="services.html" class="text-secondary font-medium hover:text-primary transition-colors">业务范围</a>
+                    <a href="cases.html" class="text-secondary font-medium hover:text-primary transition-colors">成功案例</a>
+                    <a href="news.html" class="text-secondary font-medium hover:text-primary transition-colors">行业资讯</a>
+                    <a href="contact.html" class="text-secondary font-medium hover:text-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 联系电话 -->
+                <div class="hidden md:flex items-center text-secondary">
+                    <i class="fa fa-phone-square text-primary mr-2 text-xl"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-secondary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-light border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html" class="block py-2 text-primary font-medium">首页</a>
+                <a href="about.html" class="block py-2 text-secondary hover:text-primary transition-colors">关于我们</a>
+                <a href="services.html" class="block py-2 text-secondary hover:text-primary transition-colors">业务范围</a>
+                <a href="cases.html" class="block py-2 text-secondary hover:text-primary transition-colors">成功案例</a>
+                <a href="news.html" class="block py-2 text-secondary hover:text-primary transition-colors">行业资讯</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-primary transition-colors">联系我们</a>
+                <div class="flex items-center pt-2 text-secondary border-t">
+                    <i class="fa fa-phone-square text-primary mr-2"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉区域 -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="h-full bg-cover bg-center" style="background-image: url('image/topbg.jpg');">
+                <div class="absolute inset-0 bg-dark/40"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white leading-tight text-shadow-lg mb-6">
+                    打造卓越展览体验<br>创造无限商业价值
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 text-shadow mb-8 max-w-2xl">
+                    福州佳势展览有限公司专注于为客户提供一站式展览解决方案，从创意设计到现场执行，我们全程保驾护航。
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="services.html" class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        了解服务
+                    </a>
+                    <a href="contact.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        联系我们
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <a href="#about" class="flex flex-col items-center">
+                <span class="mb-2 text-sm font-medium">向下滚动</span>
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">关于佳势展览</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，
+                    拥有多年行业经验和专业团队，为客户提供全方位的展览解决方案。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="image/topbg1.jpg" alt="福州佳势展览公司" class="w-full h-auto rounded-lg ">
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-lg hidden md:block">
+                        <p class="text-4xl font-bold">7+</p>
+                        <p class="text-sm mt-1">行业服务经验</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">专业展览服务提供商</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        福州佳势展览有限公司成立于2018年，是福建省内知名的展览服务企业。公司专注于展览展示设计、
+                        展台搭建、展厅装修、活动策划等业务，服务领域涵盖各类展会、企业活动、品牌推广等。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        我们拥有一支经验丰富、创意独到的专业团队，配备现代化的制作工厂和先进的设备，
+                        能够为客户提供从概念设计到现场执行的一站式服务，确保每个项目都能完美呈现。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-primary text-4xl font-bold mb-2">200+</div>
+                            <p class="text-gray-600">成功案例</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-primary text-4xl font-bold mb-2">60+</div>
+                            <p class="text-gray-600">长期客户</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-primary text-4xl font-bold mb-2">30+</div>
+                            <p class="text-gray-600">专业团队</p>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                        <span>了解更多</span>
+                        <i class="fa fa-long-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务 -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">核心业务</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    我们提供全方位的展览展示服务，从创意设计到现场搭建，从前期策划到后期执行，
+                    为您打造独一无二的展览体验。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 业务项1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw01.jpg" alt="展览展陈" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">展览展陈</h3>
+                        <p class="text-gray-500 text-sm mb-1">Exhibition & Display</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            专业展台设计搭建，展会整体规划，打造独特展览空间。
+                        </p>
+                        <a href="services.html#exhibition" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw02.jpg" alt="标牌工程" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">标牌工程</h3>
+                        <p class="text-gray-500 text-sm mb-1">Signage Engineering</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            标识系统设计制作，导视标牌安装，户外大型标牌工程。
+                        </p>
+                        <a href="services.html#signage" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw03.jpg" alt="活动布置" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">活动布置</h3>
+                        <p class="text-gray-500 text-sm mb-1">Event Setup</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            活动现场策划布置，舞台搭建，灯光音响设备配置。
+                        </p>
+                        <a href="services.html#event" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw04.jpg" alt="文化墙" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">文化墙</h3>
+                        <p class="text-gray-500 text-sm mb-1">Cultural Wall</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            企业文化墙设计，党建文化墙制作，校园文化墙规划。
+                        </p>
+                        <a href="services.html#cultural" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw05.jpg" alt="宣传导视" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">宣传导视</h3>
+                        <p class="text-gray-500 text-sm mb-1">Promotion & Wayfinding</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            宣传物料设计制作，空间导视系统规划，临时宣传布置。
+                        </p>
+                        <a href="services.html#promotion" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw06.jpg" alt="设备器材" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">设备器材</h3>
+                        <p class="text-gray-500 text-sm mb-1">Equipment & Materials</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            展览搭建器材租赁，灯光音响设备出租，器材运输安装。
+                        </p>
+                        <a href="services.html#equipment" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw07.jpg" alt="形象墙" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">形象墙</h3>
+                        <p class="text-gray-500 text-sm mb-1">Brand Wall</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            企业LOGO墙设计，前台形象墙制作，品牌展示墙规划。
+                        </p>
+                        <a href="services.html#brand" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 业务项8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="h-40 overflow-hidden">
+                        <img src="image/yw08.jpg" alt="店面厨窗" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-secondary">店面厨窗</h3>
+                        <p class="text-gray-500 text-sm mb-1">Storefront Window</p>
+                        <p class="text-gray-600 mt-3 mb-4">
+                            橱窗主题设计，橱窗道具制作，季节性橱窗更新。
+                        </p>
+                        <a href="services.html#storefront" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                    查看全部业务
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="98">0</div>
+                    <p class="text-white/80">客户满意度(%)</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="1500">0</div>
+                    <p class="text-white/80">完成项目数</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="50">0</div>
+                    <p class="text-white/80">合作国家地区</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 counter" data-target="15">0</div>
+                    <p class="text-white/80">行业经验(年)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="cases" class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">成功案例</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    多年来，我们为各行各业的客户提供了优质的展览服务，
+                    以下是我们的部分成功案例，展示了我们的专业能力和创意实力。
+                </p>
+            </div>
+            
+            <!-- 案例分类 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="case-filter active px-6 py-2 rounded-full bg-primary text-white font-medium">全部案例</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-secondary font-medium hover:bg-primary hover:text-white transition-colors">展台设计</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-secondary font-medium hover:bg-primary hover:text-white transition-colors">展厅装修</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-secondary font-medium hover:bg-primary hover:text-white transition-colors">活动布置</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-secondary font-medium hover:bg-primary hover:text-white transition-colors">文化墙</button>
+            </div>
+            
+            <!-- 案例展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 案例1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://picsum.photos/id/1071/600/400" alt="某科技展展台设计搭建" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">展台设计</span>
+                            <span class="text-sm text-gray-500">2023-06-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary group-hover:text-primary transition-colors">某科技展展台设计搭建</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            为客户打造的现代科技风格展台，结合多媒体互动元素，突出产品科技感和创新性，吸引大量观众驻足。
+                        </p>
+                        <a href="cases.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 案例2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://picsum.photos/id/1060/600/400" alt="企业年会活动布置" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">活动布置</span>
+                            <span class="text-sm text-gray-500">2023-01-20</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary group-hover:text-primary transition-colors">企业年会活动布置</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            为大型企业年会设计的舞台和场地布置，结合品牌元素和新年主题，营造热烈欢快的氛围，提升员工体验。
+                        </p>
+                        <a href="cases.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 案例3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://picsum.photos/id/1064/600/400" alt="企业文化墙设计制作" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">文化墙</span>
+                            <span class="text-sm text-gray-500">2023-03-10</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-secondary group-hover:text-primary transition-colors">企业文化墙设计制作</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">
+                            为科技公司设计的企业文化墙，融合企业发展历程、核心价值观和团队风采，展现企业精神风貌。
+                        </p>
+                        <a href="cases.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                            <span>查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="cases.html" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                    查看更多案例
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">客户评价</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    听听我们的客户怎么说，他们的认可是我们不断前进的动力，
+                    每一次成功的合作都是我们专业服务的最好证明。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 评价1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "佳势展览团队的专业程度令人印象深刻，从展台设计到现场搭建，全程都非常顺利。
+                        他们的创意和执行力让我们在展会上脱颖而出，获得了很多客户的关注。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1001/100/100" alt="客户头像" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">张先生</h4>
+                            <p class="text-gray-500 text-sm">某科技公司市场总监</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "我们公司的年会活动由佳势展览负责布置，现场效果超出预期。他们对细节的把控非常到位，
+                        从舞台设计到氛围营造，每一个环节都考虑得很周全，员工们都非常满意。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1002/100/100" alt="客户头像" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">李女士</h4>
+                            <p class="text-gray-500 text-sm">某集团人力资源总监</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "佳势展览为我们设计制作的企业文化墙非常出色，不仅美观大方，而且很好地展现了我们的企业精神。
+                        他们的设计团队很有耐心，根据我们的需求多次调整方案，最终效果令人满意。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1003/100/100" alt="客户头像" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-secondary">王先生</h4>
+                            <p class="text-gray-500 text-sm">某制造企业总经理</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系咨询 -->
+    <section id="contact" class="section-padding bg-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="section-title">联系我们</h2>
+                    <div class="w-20 h-1 bg-primary mb-6"></div>
+                    <p class="text-gray-600 mb-8 max-w-lg">
+                        无论您有任何疑问或需求，都可以通过以下方式联系我们，我们的专业团队将为您提供一对一的咨询服务，
+                        为您量身定制最适合的解决方案。
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-map-marker text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-1">公司地址</h4>
+                                <p class="text-gray-600">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-1">联系电话</h4>
+                                <p class="text-gray-600">400-888-9999</p>
+                                <p class="text-gray-600">0591-88887777</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-1">电子邮箱</h4>
+                                <p class="text-gray-600">info@jas-expo.com</p>
+                                <p class="text-gray-600">45025075@qq.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-clock-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary mb-1">工作时间</h4>
+                                <p class="text-gray-600">周一至周五: 9:00 - 18:00</p>
+                                <p class="text-gray-600">周六: 9:30 - 16:00（节假日除外）</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-secondary">在线咨询</h3>
+                        <form id="contact-form" action="send-email.php" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">姓名 *</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">电话 *</label>
+                                    <input type="tel" id="phone" name="phone" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">业务类型</label>
+                                <select id="service" name="service"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                    <option value="">请选择业务类型</option>
+                                    <option value="exhibition">展览展陈</option>
+                                    <option value="signage">标牌工程</option>
+                                    <option value="event">活动布置</option>
+                                    <option value="cultural">文化墙</option>
+                                    <option value="promotion">宣传导视</option>
+                                    <option value="equipment">设备器材</option>
+                                    <option value="brand">形象墙</option>
+                                    <option value="storefront">店面厨窗</option>
+                                    <option value="other">其他服务</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">咨询内容 *</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all hover-lift">
+                                提交咨询
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-14 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，为客户提供全方位的展览解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">业务范围</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-primary transition-colors">成功案例</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-primary transition-colors">行业资讯</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">业务范围</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#exhibition" class="text-gray-400 hover:text-primary transition-colors">展览展陈</a></li>
+                        <li><a href="services.html#signage" class="text-gray-400 hover:text-primary transition-colors">标牌工程</a></li>
+                        <li><a href="services.html#event" class="text-gray-400 hover:text-primary transition-colors">活动布置</a></li>
+                        <li><a href="services.html#cultural" class="text-gray-400 hover:text-primary transition-colors">文化墙</a></li>
+                        <li><a href="services.html#promotion" class="text-gray-400 hover:text-primary transition-colors">宣传导视</a></li>
+                        <li><a href="services.html#equipment" class="text-gray-400 hover:text-primary transition-colors">设备器材</a></li>
+                        <li><a href="services.html#brand" class="text-gray-400 hover:text-primary transition-colors">形象墙</a></li>
+                        <li><a href="services.html#storefront" class="text-gray-400 hover:text-primary transition-colors">店面厨窗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-888-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">45025075@qq.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 福州佳势展览有限公司 版权所有 | 闽ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all z-50">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('py-2', 'shadow');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.replace('fa-times', 'fa-bars');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 数字计数器动画
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+        
+        // 当元素进入视口时触发计数器动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        if (counters.length > 0) {
+            observer.observe(document.querySelector('.counter').parentElement.parentElement.parentElement);
+        }
+        
+        // 案例筛选
+        const caseFilters = document.querySelectorAll('.case-filter');
+        
+        caseFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // 移除所有激活状态
+                caseFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-primary', 'text-white');
+                    f.classList.add('bg-white', 'text-secondary');
+                });
+                
+                // 设置当前激活状态
+                filter.classList.add('active', 'bg-primary', 'text-white');
+                filter.classList.remove('bg-white', 'text-secondary');
+                
+                // 这里可以添加实际筛选逻辑
+            });
+        });
+        
+        // 表单提交处理
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // 这里添加表单验证和提交逻辑
+                alert('感谢您的咨询，我们会尽快与您联系！');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
