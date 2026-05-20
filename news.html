@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行业资讯 - 福州佳势展览有限公司</title>
+    <meta name="description" content="福州佳势展览有限公司提供最新展览行业资讯、公司动态、展会信息和行业趋势分析，了解展览行业前沿动态。">
+    <meta name="keywords" content="展览行业资讯,展会信息,展览趋势,佳势展览动态,福州展览新闻">
+    <!-- 引入外部资源 -->
+    <script src="csjs/tailwindcss.js"></script>
+    <link href="csjs/awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!--<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script> -->
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9CB93B',
+                        secondary: '#333333',
+                        accent: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .hover-lift {
+                @apply hover:-translate-y-1 transition-all duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-secondary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-3xl mx-auto;
+            }
+            .section-divider {
+                @apply w-20 h-1 bg-primary mx-auto mb-6;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-light/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-12 md:h-14">
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary font-medium hover:text-primary transition-colors">首页</a>
+                    <a href="about.html" class="text-secondary font-medium hover:text-primary transition-colors">关于我们</a>
+                    <a href="services.html" class="text-secondary font-medium hover:text-primary transition-colors">业务范围</a>
+                    <a href="cases.html" class="text-secondary font-medium hover:text-primary transition-colors">成功案例</a>
+                    <a href="news.html" class="text-primary font-medium hover:text-primary/80 transition-colors">行业资讯</a>
+                    <a href="contact.html" class="text-secondary font-medium hover:text-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 联系电话 -->
+                <div class="hidden md:flex items-center text-secondary">
+                    <i class="fa fa-phone-square text-primary mr-2 text-xl"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-secondary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-light border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html" class="block py-2 text-secondary hover:text-primary transition-colors">首页</a>
+                <a href="about.html" class="block py-2 text-secondary hover:text-primary transition-colors">关于我们</a>
+                <a href="services.html" class="block py-2 text-secondary hover:text-primary transition-colors">业务范围</a>
+                <a href="cases.html" class="block py-2 text-secondary hover:text-primary transition-colors">成功案例</a>
+                <a href="news.html" class="block py-2 text-primary font-medium">行业资讯</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-primary transition-colors">联系我们</a>
+                <div class="flex items-center pt-2 text-secondary border-t">
+                    <i class="fa fa-phone-square text-primary mr-2"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="bg-primary/10 py-24 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-secondary mb-4">行业资讯</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    了解展览行业最新动态、前沿趋势和公司新闻，把握行业发展脉搏，洞察市场机遇
+                </p>
+                <div class="flex justify-center mt-8">
+                    <nav class="flex text-sm" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-primary">
+                                    <i class="fa fa-home mr-2"></i>
+                                    首页
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                                    <span class="text-primary">行业资讯</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资讯分类 -->
+    <section class="py-10 bg-white shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                <button class="news-filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-primary text-white transition-all" data-filter="all">
+                    全部资讯
+                </button>
+                <button class="news-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-primary/10 transition-all" data-filter="industry">
+                    行业动态
+                </button>
+                <button class="news-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-primary/10 transition-all" data-filter="company">
+                    公司新闻
+                </button>
+                <button class="news-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-primary/10 transition-all" data-filter="trend">
+                    趋势分析
+                </button>
+                <button class="news-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-primary/10 transition-all" data-filter="exhibition">
+                    展会信息
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资讯内容 -->
+    <section class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 主内容区 -->
+                <div class="lg:col-span-2">
+                    <!-- 头条资讯 -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow mb-8">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 relative overflow-hidden">
+                                <img src="https://picsum.photos/id/1070/800/600" alt="2023年中国展览行业发展报告发布，数字化成主流趋势" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                    趋势分析
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col">
+                                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-secondary hover:text-primary transition-colors">
+                                    <a href="#">2023年中国展览行业发展报告发布，数字化成主流趋势</a>
+                                </h2>
+                                <p class="text-gray-600 mb-6 flex-grow">
+                                    最新发布的《2023年中国展览行业发展报告》显示，随着数字技术的不断发展，展览行业正加速向数字化、智能化转型。虚拟现实(VR)、增强现实(AR)等技术在展览中的应用越来越广泛，线上线下融合的展览模式成为新趋势...
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-gray-500 text-sm">
+                                        <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-09-15</span>
+                                        <span class="mx-3">|</span>
+                                        <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 1258</span>
+                                    </div>
+                                    <a href="#" class="text-primary font-medium hover:underline">
+                                        阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 资讯列表 -->
+                    <div class="space-y-6">
+                        <!-- 资讯1 -->
+                        <div class="bg-white rounded-xl overflow-hidden card-shadow hover-lift">
+                            <div class="md:flex">
+                                <div class="md:w-1/3 relative overflow-hidden">
+                                    <img src="https://picsum.photos/id/1071/600/400" alt="佳势展览中标第20届海峡两岸经贸交易会特装项目" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                        公司新闻
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 p-6 flex flex-col">
+                                    <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors">
+                                        <a href="#">佳势展览中标第20届海峡两岸经贸交易会特装项目</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 flex-grow line-clamp-2">
+                                        近日，福州佳势展览有限公司成功中标第20届海峡两岸经贸交易会多个特装展位项目。本届海交会将于11月在福州海峡国际会展中心举办，佳势展览将负责多个重要展区的设计与搭建工作...
+                                    </p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-09-10</span>
+                                            <span class="mx-3">|</span>
+                                            <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 896</span>
+                                        </div>
+                                        <a href="#" class="text-primary font-medium hover:underline">
+                                            阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 资讯2 -->
+                        <div class="bg-white rounded-xl overflow-hidden card-shadow hover-lift">
+                            <div class="md:flex">
+                                <div class="md:w-1/3 relative overflow-hidden">
+                                    <img src="https://picsum.photos/id/1073/600/400" alt="2023年全球十大展览设计趋势预测" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                        趋势分析
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 p-6 flex flex-col">
+                                    <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors">
+                                        <a href="#">2023年全球十大展览设计趋势预测</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 flex-grow line-clamp-2">
+                                        随着全球展览行业的复苏，展览设计也呈现出新的发展趋势。从可持续材料的广泛应用到沉浸式体验设计的普及，从智能化互动技术到模块化展台设计，2023年的展览设计正朝着更环保、更智能、更具体验感的方向发展...
+                                    </p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-09-05</span>
+                                            <span class="mx-3">|</span>
+                                            <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 1054</span>
+                                        </div>
+                                        <a href="#" class="text-primary font-medium hover:underline">
+                                            阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 资讯3 -->
+                        <div class="bg-white rounded-xl overflow-hidden card-shadow hover-lift">
+                            <div class="md:flex">
+                                <div class="md:w-1/3 relative overflow-hidden">
+                                    <img src="https://picsum.photos/id/1074/600/400" alt="第三届中国国际数字产品博览会将于福州举办" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                        展会信息
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 p-6 flex flex-col">
+                                    <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors">
+                                        <a href="#">第三届中国国际数字产品博览会将于福州举办</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 flex-grow line-clamp-2">
+                                        第三届中国国际数字产品博览会将于12月在福州海峡国际会展中心举办，本届数博会以"数智赋能，引领未来"为主题，将展示国内外数字产业最新成果，预计吸引超过500家企业参展，观众人数将突破10万人次...
+                                    </p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-08-28</span>
+                                            <span class="mx-3">|</span>
+                                            <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 763</span>
+                                        </div>
+                                        <a href="#" class="text-primary font-medium hover:underline">
+                                            阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 资讯4 -->
+                        <div class="bg-white rounded-xl overflow-hidden card-shadow hover-lift">
+                            <div class="md:flex">
+                                <div class="md:w-1/3 relative overflow-hidden">
+                                    <img src="https://picsum.photos/id/1076/600/400" alt="展览行业迎来复苏，专业人才需求激增" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                        行业动态
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 p-6 flex flex-col">
+                                    <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors">
+                                        <a href="#">展览行业迎来复苏，专业人才需求激增</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 flex-grow line-clamp-2">
+                                        随着国内疫情防控形势的持续向好，展览行业正加速复苏。据行业协会统计，2023年上半年全国各类展会举办场次已恢复至2019年同期的85%以上，展览行业专业人才需求也随之激增，特别是展览设计、项目管理等岗位...
+                                    </p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-08-20</span>
+                                            <span class="mx-3">|</span>
+                                            <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 642</span>
+                                        </div>
+                                        <a href="#" class="text-primary font-medium hover:underline">
+                                            阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 资讯5 -->
+                        <div class="bg-white rounded-xl overflow-hidden card-shadow hover-lift">
+                            <div class="md:flex">
+                                <div class="md:w-1/3 relative overflow-hidden">
+                                    <img src="https://picsum.photos/id/1080/600/400" alt="佳势展览完成品牌升级，推出全新服务体系" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                    <div class="absolute top-4 left-4 bg-primary text-white text-xs font-medium px-3 py-1 rounded-full">
+                                        公司新闻
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 p-6 flex flex-col">
+                                    <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors">
+                                        <a href="#">佳势展览完成品牌升级，推出全新服务体系</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 flex-grow line-clamp-2">
+                                        为更好地满足客户需求，提升服务质量，福州佳势展览有限公司近日完成品牌升级，推出全新的"360°展览解决方案"服务体系。该体系涵盖展览策划、设计、制作、搭建、运营等全流程服务，为客户提供一站式展览服务体验...
+                                    </p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-gray-500 text-sm">
+                                            <span class="flex items-center"><i class="fa fa-calendar-o mr-1"></i> 2023-08-15</span>
+                                            <span class="mx-3">|</span>
+                                            <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 927</span>
+                                        </div>
+                                        <a href="#" class="text-primary font-medium hover:underline">
+                                            阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 分页 -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="inline-flex rounded-md shadow-sm" aria-label="分页">
+                            <a href="#" class="relative inline-flex items-center px-3 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fa fa-chevron-left"></i>
+                            </a>
+                            <a href="#" aria-current="page" class="relative inline-flex items-center px-4 py-2 border border-primary bg-primary text-sm font-medium text-white">
+                                1
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                2
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                3
+                            </a>
+                            <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                                ...
+                            </span>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                12
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-3 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- 侧边栏 -->
+                <div class="lg:col-span-1">
+                    <!-- 搜索框 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary">搜索资讯</h3>
+                        <div class="relative">
+                            <input type="text" placeholder="输入关键词搜索" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                            <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                                <i class="fa fa-search text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 热门资讯 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary flex items-center">
+                            <i class="fa fa-fire text-primary mr-2"></i> 热门资讯
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <img src="https://picsum.photos/id/1072/120/120" alt="展览设计中如何有效运用色彩心理学" class="w-20 h-20 object-cover rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                        <a href="#">展览设计中如何有效运用色彩心理学</a>
+                                    </h4>
+                                    <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-08-10</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="https://picsum.photos/id/1075/120/120" alt="2023年福州重点展会时间表公布" class="w-20 h-20 object-cover rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                        <a href="#">2023年福州重点展会时间表公布</a>
+                                    </h4>
+                                    <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-08-05</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="https://picsum.photos/id/1077/120/120" alt="可持续展览：绿色展台设计的7个关键点" class="w-20 h-20 object-cover rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                        <a href="#">可持续展览：绿色展台设计的7个关键点</a>
+                                    </h4>
+                                    <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-07-28</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="https://picsum.photos/id/1078/120/120" alt="佳势展览荣获"2023年度最佳展览服务企业"称号" class="w-20 h-20 object-cover rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                        <a href="#">佳势展览荣获"2023年度最佳展览服务企业"称号</a>
+                                    </h4>
+                                    <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-07-15</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="https://picsum.photos/id/1079/120/120" alt="数字孪生技术如何改变未来展览形式" class="w-20 h-20 object-cover rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                        <a href="#">数字孪生技术如何改变未来展览形式</a>
+                                    </h4>
+                                    <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-07-10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 资讯分类 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary flex items-center">
+                            <i class="fa fa-th-list text-primary mr-2"></i> 资讯分类
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-primary/5 transition-colors">
+                                    <span class="text-secondary">行业动态</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">42</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-primary/5 transition-colors">
+                                    <span class="text-secondary">公司新闻</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">28</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-primary/5 transition-colors">
+                                    <span class="text-secondary">趋势分析</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">35</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-primary/5 transition-colors">
+                                    <span class="text-secondary">展会信息</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">56</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-primary/5 transition-colors">
+                                    <span class="text-secondary">技术应用</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">23</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 展会日历 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow">
+                        <h3 class="text-lg font-bold mb-4 text-secondary flex items-center">
+                            <i class="fa fa-calendar text-primary mr-2"></i> 近期展会
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-primary pl-4 py-1">
+                                <h4 class="font-medium text-secondary">第20届海峡两岸经贸交易会</h4>
+                                <p class="text-gray-600 text-sm mt-1">2023-11-05 至 2023-11-10</p>
+                                <p class="text-gray-500 text-xs mt-1">福州海峡国际会展中心</p>
+                            </div>
+                            <div class="border-l-4 border-gray-300 pl-4 py-1">
+                                <h4 class="font-medium text-secondary">第三届中国国际数字产品博览会</h4>
+                                <p class="text-gray-600 text-sm mt-1">2023-12-15 至 2023-12-18</p>
+                                <p class="text-gray-500 text-xs mt-1">福州海峡国际会展中心</p>
+                            </div>
+                            <div class="border-l-4 border-gray-300 pl-4 py-1">
+                                <h4 class="font-medium text-secondary">2023中国（福州）家居建材博览会</h4>
+                                <p class="text-gray-600 text-sm mt-1">2023-10-20 至 2023-10-23</p>
+                                <p class="text-gray-500 text-xs mt-1">福州海峡国际会展中心</p>
+                            </div>
+                            <div class="border-l-4 border-gray-300 pl-4 py-1">
+                                <h4 class="font-medium text-secondary">2023厦门国际投资贸易洽谈会</h4>
+                                <p class="text-gray-600 text-sm mt-1">2023-09-08 至 2023-09-11</p>
+                                <p class="text-gray-500 text-xs mt-1">厦门国际会展中心</p>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-primary font-medium hover:underline text-sm">
+                            查看更多展会 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅资讯 -->
+    <section class="section-padding bg-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">订阅行业资讯</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle mb-8">
+                    订阅我们的资讯推送，及时获取展览行业最新动态、展会信息和专业见解，把握市场机遇
+                </p>
+                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="请输入您的邮箱地址" class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all hover-lift whitespace-nowrap">
+                        立即订阅
+                    </button>
+                </form>
+                <p class="text-gray-500 text-sm mt-4">
+                    我们尊重您的隐私，不会向第三方分享您的信息
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-14 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，为客户提供全方位的展览解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">业务范围</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-primary transition-colors">成功案例</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-primary transition-colors">行业资讯</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">业务范围</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#exhibition" class="text-gray-400 hover:text-primary transition-colors">展览展陈</a></li>
+                        <li><a href="services.html#signage" class="text-gray-400 hover:text-primary transition-colors">标牌工程</a></li>
+                        <li><a href="services.html#event" class="text-gray-400 hover:text-primary transition-colors">活动布置</a></li>
+                        <li><a href="services.html#cultural" class="text-gray-400 hover:text-primary transition-colors">文化墙</a></li>
+                        <li><a href="services.html#promotion" class="text-gray-400 hover:text-primary transition-colors">宣传导视</a></li>
+                        <li><a href="services.html#equipment" class="text-gray-400 hover:text-primary transition-colors">设备器材</a></li>
+                        <li><a href="services.html#brand" class="text-gray-400 hover:text-primary transition-colors">形象墙</a></li>
+                        <li><a href="services.html#storefront" class="text-gray-400 hover:text-primary transition-colors">店面厨窗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-888-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">45025075@qq.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 福州佳势展览有限公司 版权所有 | 闽ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-light/95');
+                navbar.classList.add('bg-light');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-light/95');
+                navbar.classList.remove('bg-light');
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 资讯筛选功能
+        const newsFilterButtons = document.querySelectorAll('.news-filter-btn');
+        const newsItems = document.querySelectorAll('.card-shadow:not(.bg-white.p-6.card-shadow.mb-8):not(.bg-white.rounded-xl.p-6.card-shadow)');
+        
+        newsFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 更新按钮样式
+                newsFilterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'hover:bg-primary/10');
+                });
+                button.classList.add('active', 'bg-primary', 'text-white');
+                button.classList.remove('bg-gray-100', 'hover:bg-primary/10');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // 筛选资讯
+                newsItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const category = item.querySelector('.bg-primary.text-white.text-xs.font-medium.px-3.py-1.rounded-full')?.textContent.trim();
+                        const categoryMap = {
+                            '行业动态': 'industry',
+                            '公司新闻': 'company',
+                            '趋势分析': 'trend',
+                            '展会信息': 'exhibition'
+                        };
+                        
+                        if (categoryMap[category] === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    // 计算滚动位置（考虑固定导航栏高度）
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

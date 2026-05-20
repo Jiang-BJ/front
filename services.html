@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>业务范围 - 福州佳势展览有限公司</title>
+    <meta name="description" content="福州佳势展览有限公司提供展览展陈、标牌工程、活动布置、文化墙、宣传导视、设备器材、形象墙和店面橱窗等专业服务，一站式展览解决方案提供商。">
+    <meta name="keywords" content="福州展览展陈,标牌工程公司,活动布置服务,文化墙设计,宣传导视系统,展览设备租赁,形象墙制作,店面橱窗设计">
+    <!-- 引入外部资源 -->
+    <script src="csjs/tailwindcss.js"></script>
+    <link href="csjs/awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!--<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script> -->
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9CB93B',
+                        secondary: '#333333',
+                        accent: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .hover-lift {
+                @apply hover:-translate-y-1 transition-all duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-secondary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-3xl mx-auto;
+            }
+            .section-divider {
+                @apply w-20 h-1 bg-primary mx-auto mb-6;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-light/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-12 md:h-14">
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary font-medium hover:text-primary transition-colors">首页</a>
+                    <a href="about.html" class="text-secondary font-medium hover:text-primary transition-colors">关于我们</a>
+                    <a href="services.html" class="text-primary font-medium hover:text-primary/80 transition-colors">业务范围</a>
+                    <a href="cases.html" class="text-secondary font-medium hover:text-primary transition-colors">成功案例</a>
+                    <a href="news.html" class="text-secondary font-medium hover:text-primary transition-colors">行业资讯</a>
+                    <a href="contact.html" class="text-secondary font-medium hover:text-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 联系电话 -->
+                <div class="hidden md:flex items-center text-secondary">
+                    <i class="fa fa-phone-square text-primary mr-2 text-xl"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-secondary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-light border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html" class="block py-2 text-secondary hover:text-primary transition-colors">首页</a>
+                <a href="about.html" class="block py-2 text-secondary hover:text-primary transition-colors">关于我们</a>
+                <a href="services.html" class="block py-2 text-primary font-medium">业务范围</a>
+                <a href="cases.html" class="block py-2 text-secondary hover:text-primary transition-colors">成功案例</a>
+                <a href="news.html" class="block py-2 text-secondary hover:text-primary transition-colors">行业资讯</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-primary transition-colors">联系我们</a>
+                <div class="flex items-center pt-2 text-secondary border-t">
+                    <i class="fa fa-phone-square text-primary mr-2"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="bg-primary/10 py-24 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-secondary mb-4">业务范围</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    我们提供全方位的展览展示服务，从创意设计到现场搭建，从前期策划到后期执行，为您打造独一无二的展览体验
+                </p>
+                <div class="flex justify-center mt-8">
+                    <nav class="flex text-sm" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-primary">
+                                    <i class="fa fa-home mr-2"></i>
+                                    首页
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                                    <span class="text-primary">业务范围</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务快速导航 -->
+    <section class="py-10 bg-white sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="overflow-x-auto">
+                <div class="flex space-x-2 md:space-x-4 min-w-max">
+                    <a href="#exhibition" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">展览展陈</a>
+                    <a href="#signage" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">标牌工程</a>
+                    <a href="#event" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">活动布置</a>
+                    <a href="#cultural" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">文化墙</a>
+                    <a href="#promotion" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">宣传导视</a>
+                    <a href="#equipment" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">设备器材</a>
+                    <a href="#brand" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">形象墙</a>
+                    <a href="#storefront" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors">店面厨窗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务详情 -->
+    <section class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 1. 展览展陈 -->
+            <div id="exhibition" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">01 / Exhibition & Display</span>
+                        <h2 class="section-title">展览展陈</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们专注于为各类展会提供专业的展台设计与搭建服务，从概念构思到现场执行，
+                            为客户打造独具特色的展览空间，提升品牌形象和产品吸引力。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            凭借多年的行业经验，我们深刻理解不同行业的展览需求，能够根据客户品牌定位和产品特点，
+                            设计出既符合行业特性又具创新性的展台方案，帮助客户在众多参展商中脱颖而出。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">各类展会展台设计与搭建</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">特装展台、标准展台设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">展览现场布置与管理</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">沉浸式展览空间设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">展会后续拆除与物料回收</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1067/600/800" alt="展览展陈服务示例：展会特装展台设计搭建" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1071/600/400" alt="展览展陈服务示例：标准展位设计制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1072/600/400" alt="展览展陈服务示例：展览现场布置" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1074/600/800" alt="展览展陈服务示例：沉浸式展览空间" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2. 标牌工程 -->
+            <div id="signage" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">02 / Signage Engineering</span>
+                        <h2 class="section-title">标牌工程</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们提供专业的标牌系统规划、设计、制作与安装服务，为各类商业空间、公共设施、
+                            产业园区等提供功能完善、美观协调的标识解决方案。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            我们的标牌工程不仅注重功能性和导向性，还充分考虑与环境的协调性和美观度，
+                            采用高品质材料和先进工艺，确保标牌的耐用性和视觉效果，提升空间的整体品质。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">标识系统整体规划与设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">各类导视标牌设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">大型户外标牌工程施工</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">发光字、LED标识制作安装</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">标牌维护、更新与更换</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1073/600/800" alt="标牌工程服务示例：商业空间导视系统" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1075/600/400" alt="标牌工程服务示例：户外大型标牌" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1076/600/400" alt="标牌工程服务示例：LED发光字制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1077/600/800" alt="标牌工程服务示例：产业园区标识系统" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3. 活动布置 -->
+            <div id="event" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">03 / Event Setup</span>
+                        <h2 class="section-title">活动布置</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们为各类活动提供专业的现场布置服务，从企业年会、产品发布到品牌推广活动，
+                            打造符合活动主题和品牌调性的现场氛围，为活动增添亮点和记忆点。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            我们的团队拥有丰富的活动执行经验，能够根据活动规模和需求，提供从场地规划、
+                            舞台设计、灯光音响配置到现场布置的一站式服务，确保活动顺利进行并达到预期效果。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">企业年会、庆典活动整体布置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">产品发布会、招商会现场布置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">舞台设计、搭建与灯光音响配置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">签到区、合影区、展示区设计布置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">活动现场执行与协调管理</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1060/600/800" alt="活动布置服务示例：企业年会现场布置" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1062/600/400" alt="活动布置服务示例：产品发布会现场" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1063/600/400" alt="活动布置服务示例：舞台设计搭建" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1068/600/800" alt="活动布置服务示例：庆典活动现场" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4. 文化墙 -->
+            <div id="cultural" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">04 / Cultural Wall</span>
+                        <h2 class="section-title">文化墙</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们专注于各类文化墙的设计与制作，将企业文化、品牌故事、价值观等通过视觉化的方式呈现，
+                            打造独具特色的文化展示空间，增强品牌凝聚力和文化认同感。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            无论是企业办公区的文化墙、学校的校园文化墙，还是社区、政府单位的文化宣传墙，
+                            我们都能根据空间特点和文化主题，设计出既美观又富有内涵的文化墙方案，实现文化传播与空间装饰的双重价值。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">企业文化墙、品牌文化墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">党建文化墙、红色文化墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">校园文化墙、班级文化墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">社区文化墙、街道文化墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">文化墙内容策划与视觉设计</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1064/600/800" alt="文化墙服务示例：企业文化墙设计" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1065/600/400" alt="文化墙服务示例：党建文化墙制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1066/600/400" alt="文化墙服务示例：校园文化墙设计" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1069/600/800" alt="文化墙服务示例：社区文化墙制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5. 宣传导视 -->
+            <div id="promotion" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">05 / Promotion & Wayfinding</span>
+                        <h2 class="section-title">宣传导视</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们提供专业的宣传物料设计制作和空间导视系统规划服务，帮助客户有效传递信息、
+                            引导人流、提升品牌曝光度，实现信息传递的准确性和有效性。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            无论是商业场所的宣传推广，还是公共空间的导视系统，我们都能结合空间特点和受众需求，
+                            设计出既美观实用又易于理解的宣传导视方案，提升信息传递效率和用户体验。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">宣传海报、展板、展架设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">空间导视系统规划与设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">活动现场宣传物料设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">商场、展馆临时宣传点位布置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">数字导视系统内容设计与制作</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1080/600/800" alt="宣传导视服务示例：商场导视系统" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1081/600/400" alt="宣传导视服务示例：活动宣传物料" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1082/600/400" alt="宣传导视服务示例：展馆导视设计" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1083/600/800" alt="宣传导视服务示例：数字导视系统" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 6. 设备器材 -->
+            <div id="equipment" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">06 / Equipment & Materials</span>
+                        <h2 class="section-title">设备器材</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们提供各类展览展示和活动所需的设备器材租赁服务，拥有齐全的设备种类和充足的数量，
+                            能够满足不同规模和类型的活动需求，为客户提供便捷的设备解决方案。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            我们的设备器材均为高品质产品，定期维护保养，确保性能稳定可靠。同时提供专业的安装调试和技术支持，
+                            让客户无后顾之忧，专注于活动本身的顺利开展。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">展览搭建器材租赁（桁架、展板等）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">灯光音响设备租赁与调试</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">展示道具、展具定制与租赁</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">LED屏幕、投影设备租赁</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">设备运输、安装、调试与回收</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1084/600/800" alt="设备器材服务示例：展览搭建器材" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1085/600/400" alt="设备器材服务示例：灯光音响设备" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1086/600/400" alt="设备器材服务示例：展示道具租赁" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1087/600/800" alt="设备器材服务示例：LED屏幕租赁" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 7. 形象墙 -->
+            <div id="brand" class="mb-24 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">07 / Brand Wall</span>
+                        <h2 class="section-title">形象墙</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们专注于企业形象墙的设计与制作，将品牌标识、企业文化与空间环境完美融合，
+                            打造独具特色的企业形象展示区，提升企业整体形象和品牌价值。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            形象墙是企业给访客的第一印象，我们注重设计的原创性和工艺的精致性，
+                            根据企业行业特性、品牌定位和空间特点，提供个性化的形象墙解决方案，
+                            让形象墙成为企业品牌的无声代言人。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">企业LOGO墙、前台形象墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">品牌展示墙、产品展示墙设计制作</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">各类材质形象墙定制（金属、木质、亚克力等）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">形象墙灯光设计与安装</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">形象墙维护与更新</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1088/600/800" alt="形象墙服务示例：企业前台形象墙" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1089/600/400" alt="形象墙服务示例：LOGO墙设计制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1090/600/400" alt="形象墙服务示例：金属材质形象墙" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1091/600/800" alt="形象墙服务示例：品牌展示墙" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 店面厨窗 -->
+            <div id="storefront" class="scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">08 / Storefront Window</span>
+                        <h2 class="section-title">店面厨窗</h2>
+                        <div class="w-16 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            我们提供专业的店面橱窗设计与布置服务，通过创意的设计和精心的布置，
+                            打造吸引眼球的橱窗展示，提升店铺吸引力和品牌形象，促进顾客进店消费。
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            橱窗是店铺的"脸面"，是吸引顾客的第一道防线。我们结合品牌定位、产品特点和目标客群，
+                            设计出既美观又具销售力的橱窗方案，通过视觉营销提升品牌价值和销售业绩。
+                        </p>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-secondary">我们的服务内容</h3>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">品牌门店橱窗主题设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">橱窗道具设计、制作与布置</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">橱窗灯光设计与安装</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">季节性、节日性橱窗更新</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span class="text-gray-600">橱窗维护与调整</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                            咨询详情
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://picsum.photos/id/1059/600/800" alt="店面厨窗服务示例：品牌门店橱窗设计" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1061/600/400" alt="店面厨窗服务示例：橱窗道具制作" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://picsum.photos/id/1058/600/400" alt="店面厨窗服务示例：节日橱窗布置" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <img src="https://picsum.photos/id/1057/600/800" alt="店面厨窗服务示例：季节性橱窗更新" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系咨询 -->
+    <section class="section-padding bg-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">需要了解更多业务详情？</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle mb-10">
+                    无论您有任何疑问或需求，我们的专业团队都将为您提供一对一的咨询服务，
+                    为您量身定制最适合的解决方案。
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        在线咨询
+                    </a>
+                    <a href="tel:4008889999" class="bg-white hover:bg-gray-50 text-secondary border border-gray-300 font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        <i class="fa fa-phone mr-2"></i> 电话咨询
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-14 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，为客户提供全方位的展览解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">业务范围</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-primary transition-colors">成功案例</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-primary transition-colors">行业资讯</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">业务范围</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#exhibition" class="text-gray-400 hover:text-primary transition-colors">展览展陈</a></li>
+                        <li><a href="services.html#signage" class="text-gray-400 hover:text-primary transition-colors">标牌工程</a></li>
+                        <li><a href="services.html#event" class="text-gray-400 hover:text-primary transition-colors">活动布置</a></li>
+                        <li><a href="services.html#cultural" class="text-gray-400 hover:text-primary transition-colors">文化墙</a></li>
+                        <li><a href="services.html#promotion" class="text-gray-400 hover:text-primary transition-colors">宣传导视</a></li>
+                        <li><a href="services.html#equipment" class="text-gray-400 hover:text-primary transition-colors">设备器材</a></li>
+                        <li><a href="services.html#brand" class="text-gray-400 hover:text-primary transition-colors">形象墙</a></li>
+                        <li><a href="services.html#storefront" class="text-gray-400 hover:text-primary transition-colors">店面厨窗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-888-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">45025075@qq.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 福州佳势展览有限公司 版权所有 | 闽ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-light/95');
+                navbar.classList.add('bg-light');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-light/95');
+                navbar.classList.remove('bg-light');
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    // 计算滚动位置（考虑固定导航栏高度）
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

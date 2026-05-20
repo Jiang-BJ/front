@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023年中国展览行业发展报告发布，数字化成主流趋势 - 福州佳势展览有限公司</title>
+    <meta name="description" content="2023年中国展览行业发展报告分析了展览行业数字化转型趋势，探讨虚拟现实、增强现实等技术在展览中的应用，以及线上线下融合的展览新模式。">
+    <meta name="keywords" content="展览行业报告,展览数字化,VR展览应用,AR展览技术,线上线下融合展览">
+    <!-- 引入外部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9CB93B',
+                        secondary: '#333333',
+                        accent: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .hover-lift {
+                @apply hover:-translate-y-1 transition-all duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-secondary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-3xl mx-auto;
+            }
+            .section-divider {
+                @apply w-20 h-1 bg-primary mx-auto mb-6;
+            }
+            .article-content p {
+                @apply mb-6 leading-relaxed;
+            }
+            .article-content img {
+                @apply max-w-full h-auto my-8 rounded-lg;
+            }
+            .article-content h3 {
+                @apply text-xl font-bold mb-4 mt-8 text-secondary;
+            }
+            .article-content ul {
+                @apply list-disc pl-6 mb-6 space-y-2;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-light/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-12 md:h-14">
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary font-medium hover:text-primary transition-colors">首页</a>
+                    <a href="about.html" class="text-secondary font-medium hover:text-primary transition-colors">关于我们</a>
+                    <a href="services.html" class="text-secondary font-medium hover:text-primary transition-colors">业务范围</a>
+                    <a href="cases.html" class="text-secondary font-medium hover:text-primary transition-colors">成功案例</a>
+                    <a href="news.html" class="text-primary font-medium hover:text-primary/80 transition-colors">行业资讯</a>
+                    <a href="contact.html" class="text-secondary font-medium hover:text-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 联系电话 -->
+                <div class="hidden md:flex items-center text-secondary">
+                    <i class="fa fa-phone-square text-primary mr-2 text-xl"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-secondary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-light border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html" class="block py-2 text-secondary hover:text-primary transition-colors">首页</a>
+                <a href="about.html" class="block py-2 text-secondary hover:text-primary transition-colors">关于我们</a>
+                <a href="services.html" class="block py-2 text-secondary hover:text-primary transition-colors">业务范围</a>
+                <a href="cases.html" class="block py-2 text-secondary hover:text-primary transition-colors">成功案例</a>
+                <a href="news.html" class="block py-2 text-primary font-medium">行业资讯</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-primary transition-colors">联系我们</a>
+                <div class="flex items-center pt-2 text-secondary border-t">
+                    <i class="fa fa-phone-square text-primary mr-2"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="bg-primary/10 py-24 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-secondary mb-4">行业资讯详情</h1>
+                <div class="flex justify-center mt-8">
+                    <nav class="flex text-sm" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-primary">
+                                    <i class="fa fa-home mr-2"></i>
+                                    首页
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                                    <a href="news.html" class="text-gray-600 hover:text-primary">行业资讯</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                                    <span class="text-primary">2023年中国展览行业发展报告发布</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章内容 -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- 主内容区 -->
+                <div class="lg:col-span-2">
+                    <article class="bg-white rounded-xl overflow-hidden card-shadow p-6 md:p-8">
+                        <div class="mb-8">
+                            <span class="inline-block bg-primary/10 text-primary text-sm font-medium px-4 py-1 rounded-full mb-4">
+                                趋势分析
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-secondary">
+                                2023年中国展览行业发展报告发布，数字化成主流趋势
+                            </h2>
+                            <div class="flex flex-wrap items-center text-gray-500 text-sm gap-4">
+                                <span class="flex items-center"><i class="fa fa-calendar-o mr-2"></i> 2023-09-15</span>
+                                <span class="flex items-center"><i class="fa fa-user-o mr-2"></i> 行业研究部</span>
+                                <span class="flex items-center"><i class="fa fa-eye mr-2"></i> 1258 阅读</span>
+                                <span class="flex items-center"><i class="fa fa-comment-o mr-2"></i> 24 评论</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <img src="https://picsum.photos/id/1070/1200/600" alt="2023年中国展览行业发展报告发布会现场" class="w-full h-auto rounded-lg">
+                            <p class="text-gray-500 text-sm mt-2 text-center">2023年中国展览行业发展报告发布会现场</p>
+                        </div>
+                        
+                        <div class="article-content text-gray-700">
+                            <p>
+                                近日，由中国展览协会联合多家行业机构共同编制的《2023年中国展览行业发展报告》正式发布。报告全面分析了当前中国展览行业的发展现状、面临的挑战与机遇，并对未来发展趋势进行了展望。
+                            </p>
+                            
+                            <p>
+                                报告显示，随着国内疫情防控形势的持续稳定，2023年中国展览行业呈现快速复苏态势。截至2023年8月，全国各类展会举办场次已恢复至2019年同期的85%以上，展览总面积恢复至疫情前的90%，行业整体复苏势头强劲。
+                            </p>
+                            
+                            <h3>数字化转型成为行业共识</h3>
+                            
+                            <p>
+                                报告特别强调，数字化转型已成为展览行业的核心发展趋势。超过78%的展览企业表示已开展数字化转型工作，其中大型展览企业的数字化渗透率达到92%。数字化技术的应用不仅提高了展览运营效率，也极大地提升了参展商和观众的体验。
+                            </p>
+                            
+                            <img src="https://picsum.photos/id/1071/1200/600" alt="数字化展览现场展示" class="w-full h-auto rounded-lg">
+                            <p class="text-gray-500 text-sm mt-2 text-center">数字化技术在展览中的创新应用</p>
+                            
+                            <p>
+                                虚拟现实(VR)、增强现实(AR)、人工智能(AI)等技术在展览中的应用日益广泛。报告数据显示，2023年采用VR/AR技术的展会数量同比增长了120%，线上虚拟展厅的访问量平均增长了85%。这些技术的应用打破了时间和空间的限制，使展览的影响力得到极大扩展。
+                            </p>
+                            
+                            <h3>线上线下融合成为新展览模式</h3>
+                            
+                            <p>
+                                经历了疫情的考验，线上线下融合的展览模式已成为行业新标准。报告指出，纯线下展览的比例从2019年的90%下降至2023年的35%，而采用"线下为主、线上为辅"或"线上线下并重"模式的展会比例则上升至65%。
+                            </p>
+                            
+                            <p>
+                                这种融合模式不仅能够满足不同参展商和观众的需求，也为展览主办方带来了新的收入来源。线上展览平台的广告收入、虚拟展位费、在线研讨会收费等已成为许多展览公司的重要收入组成部分。
+                            </p>
+                            
+                            <h3>行业面临的挑战与应对策略</h3>
+                            
+                            <p>
+                                尽管行业整体复苏向好，但报告也指出了当前展览行业面临的主要挑战：
+                            </p>
+                            
+                            <ul>
+                                <li>专业人才短缺，特别是既懂展览业务又掌握数字技术的复合型人才</li>
+                                <li>展览同质化严重，缺乏创新内容和形式</li>
+                                <li>数字化转型投入大，中小企业压力较大</li>
+                                <li>国际展览交流尚未完全恢复，国际化程度有待提高</li>
+                            </ul>
+                            
+                            <p>
+                                针对这些挑战，报告提出了相应的应对策略，包括加强人才培养、推动展览内容创新、建立行业数字化转型共享平台、积极拓展国际合作等。
+                            </p>
+                            
+                            <h3>未来发展趋势展望</h3>
+                            
+                            <p>
+                                报告预测，未来3-5年，中国展览行业将呈现以下发展趋势：
+                            </p>
+                            
+                            <ul>
+                                <li>数字化、智能化技术将深度融入展览全流程，从策划、招商、展示到观众服务</li>
+                                <li>绿色展览理念将得到进一步推广，可持续材料和环保技术的应用将成为标配</li>
+                                <li>展览将更加注重内容创新和体验设计，从"展示产品"向"传递价值"转变</li>
+                                <li>行业整合加速，大型展览集团的市场份额将进一步提升</li>
+                                <li>国际化程度逐步恢复并提升，中国展览品牌的国际影响力将增强</li>
+                            </ul>
+                            
+                            <p>
+                                中国展览协会负责人表示，面对新的发展机遇和挑战，展览行业需要加强合作与创新，共同推动行业高质量发展，为中国经济的复苏和增长贡献力量。
+                            </p>
+                        </div>
+                        
+                        <!-- 文章标签 -->
+                        <div class="mt-12 pt-6 border-t border-gray-200">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-gray-500">标签：</span>
+                                <a href="#" class="bg-gray-100 hover:bg-primary/10 text-gray-700 hover:text-primary px-3 py-1 rounded-full text-sm transition-colors">展览行业</a>
+                                <a href="#" class="bg-gray-100 hover:bg-primary/10 text-gray-700 hover:text-primary px-3 py-1 rounded-full text-sm transition-colors">数字化转型</a>
+                                <a href="#" class="bg-gray-100 hover:bg-primary/10 text-gray-700 hover:text-primary px-3 py-1 rounded-full text-sm transition-colors">行业报告</a>
+                                <a href="#" class="bg-gray-100 hover:bg-primary/10 text-gray-700 hover:text-primary px-3 py-1 rounded-full text-sm transition-colors">VR技术</a>
+                                <a href="#" class="bg-gray-100 hover:bg-primary/10 text-gray-700 hover:text-primary px-3 py-1 rounded-full text-sm transition-colors">线上线下融合</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 分享按钮 -->
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <div class="flex flex-wrap items-center gap-4">
+                                <span class="text-gray-500">分享：</span>
+                                <a href="#" class="bg-[#07C160]/10 hover:bg-[#07C160] text-[#07C160] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="bg-[#E6162D]/10 hover:bg-[#E6162D] text-[#E6162D] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="bg-[#1DA1F2]/10 hover:bg-[#1DA1F2] text-[#1DA1F2] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-[#0A66C2]/10 hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-700 text-gray-700 hover:text-white w-9 h-9 rounded-full flex items-center justify-center transition-all">
+                                    <i class="fa fa-copy"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- 上一篇下一篇 -->
+                        <div class="mt-10 pt-6 border-t border-gray-200">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <p class="text-gray-500 mb-2 text-sm">上一篇</p>
+                                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">
+                                        <i class="fa fa-angle-left mr-1"></i> 2023年全球十大展览设计趋势预测
+                                    </a>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-gray-500 mb-2 text-sm">下一篇</p>
+                                    <a href="#" class="text-secondary hover:text-primary font-medium transition-colors">
+                                        第三届中国国际数字产品博览会将于福州举办 <i class="fa fa-angle-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 评论区 -->
+                        <div class="mt-12 pt-8 border-t border-gray-200">
+                            <h3 class="text-xl font-bold mb-6 text-secondary">评论 (24)</h3>
+                            
+                            <!-- 评论输入框 -->
+                            <div class="mb-10">
+                                <textarea placeholder="请输入您的评论..." rows="4" 
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"></textarea>
+                                <div class="flex justify-end mt-4">
+                                    <button class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-2 rounded-md transition-all hover-lift">
+                                        发表评论
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- 评论列表 -->
+                            <div class="space-y-6">
+                                <!-- 评论1 -->
+                                <div class="flex gap-4 pb-6 border-b border-gray-100">
+                                    <img src="https://picsum.photos/id/1001/100/100" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h4 class="font-medium text-secondary">张先生</h4>
+                                            <span class="text-gray-500 text-sm">2023-09-16 10:24</span>
+                                        </div>
+                                        <p class="text-gray-700 mb-3">
+                                            这份报告分析得很到位，确实感受到了展览行业的数字化趋势。我们公司今年参加的几个展会都引入了VR技术，效果非常好，不仅节省了搭建成本，还能让更多无法到场的客户在线上参观。
+                                        </p>
+                                        <button class="text-primary text-sm hover:underline">
+                                            <i class="fa fa-reply mr-1"></i> 回复
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- 评论2 -->
+                                <div class="flex gap-4 pb-6 border-b border-gray-100">
+                                    <img src="https://picsum.photos/id/1002/100/100" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h4 class="font-medium text-secondary">李女士</h4>
+                                            <span class="text-gray-500 text-sm">2023-09-15 16:48</span>
+                                        </div>
+                                        <p class="text-gray-700 mb-3">
+                                            作为一名展览设计师，我深感数字化转型的紧迫性。传统的展览设计已经不能满足客户需求，必须不断学习新的数字技术，才能跟上行业发展的步伐。希望能有更多的培训和学习机会。
+                                        </p>
+                                        <button class="text-primary text-sm hover:underline">
+                                            <i class="fa fa-reply mr-1"></i> 回复
+                                        </button>
+                                        
+                                        <!-- 回复 -->
+                                        <div class="mt-4 ml-6 pl-4 border-l-2 border-gray-200">
+                                            <div class="flex gap-3">
+                                                <img src="https://picsum.photos/id/1003/100/100" alt="回复用户头像" class="w-10 h-10 rounded-full object-cover">
+                                                <div>
+                                                    <div class="flex justify-between items-start mb-1">
+                                                        <h5 class="font-medium text-secondary text-sm">王经理 <span class="text-gray-500 text-xs ml-2">佳势展览</span></h5>
+                                                        <span class="text-gray-500 text-xs">2023-09-15 18:12</span>
+                                                    </div>
+                                                    <p class="text-gray-700 text-sm">
+                                                        我们公司定期举办数字化展览技术培训，欢迎关注我们的公众号获取最新培训信息，也欢迎前来交流学习。
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 评论3 -->
+                                <div class="flex gap-4">
+                                    <img src="https://picsum.photos/id/1004/100/100" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h4 class="font-medium text-secondary">赵先生</h4>
+                                            <span class="text-gray-500 text-sm">2023-09-15 14:21</span>
+                                        </div>
+                                        <p class="text-gray-700 mb-3">
+                                            线上线下融合的模式确实是未来的趋势，但如何平衡线上和线下的投入，如何保证线上体验不打折扣，都是需要深入思考的问题。希望能看到更多成功案例的分享。
+                                        </p>
+                                        <button class="text-primary text-sm hover:underline">
+                                            <i class="fa fa-reply mr-1"></i> 回复
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 加载更多评论 -->
+                            <div class="mt-8 text-center">
+                                <button class="border border-primary text-primary hover:bg-primary hover:text-white font-medium px-6 py-2 rounded-md transition-all">
+                                    加载更多评论
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- 侧边栏 -->
+                <div class="lg:col-span-1">
+                    <!-- 作者信息 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary">作者信息</h3>
+                        <div class="flex items-center gap-4">
+                            <img src="https://picsum.photos/id/1005/100/100" alt="行业研究部" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-medium text-secondary">行业研究部</h4>
+                                <p class="text-gray-500 text-sm">专注展览行业研究与分析</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-4 text-sm">
+                            由资深展览行业专家组成，致力于跟踪展览行业发展动态，分析行业趋势，为展览从业者提供有价值的参考信息。
+                        </p>
+                    </div>
+                    
+                    <!-- 相关资讯 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary flex items-center">
+                            <i class="fa fa-link text-primary mr-2"></i> 相关资讯
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="#" class="block group">
+                                <div class="flex gap-3">
+                                    <img src="https://picsum.photos/id/1072/120/120" alt="2023年全球十大展览设计趋势预测" class="w-20 h-20 object-cover rounded-lg group-hover:opacity-90 transition-opacity">
+                                    <div>
+                                        <h4 class="font-medium text-secondary group-hover:text-primary transition-colors line-clamp-2">
+                                            2023年全球十大展览设计趋势预测
+                                        </h4>
+                                        <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-09-05</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="block group">
+                                <div class="flex gap-3">
+                                    <img src="https://picsum.photos/id/1073/120/120" alt="数字孪生技术如何改变未来展览形式" class="w-20 h-20 object-cover rounded-lg group-hover:opacity-90 transition-opacity">
+                                    <div>
+                                        <h4 class="font-medium text-secondary group-hover:text-primary transition-colors line-clamp-2">
+                                            数字孪生技术如何改变未来展览形式
+                                        </h4>
+                                        <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-07-10</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="block group">
+                                <div class="flex gap-3">
+                                    <img src="https://picsum.photos/id/1074/120/120" alt="可持续展览：绿色展台设计的7个关键点" class="w-20 h-20 object-cover rounded-lg group-hover:opacity-90 transition-opacity">
+                                    <div>
+                                        <h4 class="font-medium text-secondary group-hover:text-primary transition-colors line-clamp-2">
+                                            可持续展览：绿色展台设计的7个关键点
+                                        </h4>
+                                        <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-07-28</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="block group">
+                                <div class="flex gap-3">
+                                    <img src="https://picsum.photos/id/1075/120/120" alt="展览行业迎来复苏，专业人才需求激增" class="w-20 h-20 object-cover rounded-lg group-hover:opacity-90 transition-opacity">
+                                    <div>
+                                        <h4 class="font-medium text-secondary group-hover:text-primary transition-colors line-clamp-2">
+                                            展览行业迎来复苏，专业人才需求激增
+                                        </h4>
+                                        <p class="text-gray-500 text-sm mt-1"><i class="fa fa-calendar-o mr-1"></i> 2023-08-20</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 热门资讯 -->
+                    <div class="bg-white rounded-xl p-6 card-shadow mb-8">
+                        <h3 class="text-lg font-bold mb-4 text-secondary flex items-center">
+                            <i class="fa fa-fire text-primary mr-2"></i> 热门资讯
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-3">
+                                <span class="bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">1</span>
+                                <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                    <a href="#">展览设计中如何有效运用色彩心理学</a>
+                                </h4>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="bg-gray-200 text-gray-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">2</span>
+                                <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                    <a href="#">2023年福州重点展会时间表公布</a>
+                                </h4>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="bg-gray-200 text-gray-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">3</span>
+                                <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                    <a href="#">佳势展览荣获"2023年度最佳展览服务企业"称号</a>
+                                </h4>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="bg-gray-200 text-gray-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">4</span>
+                                <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                    <a href="#">如何打造一个吸引人的展会 booth 设计</a>
+                                </h4>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="bg-gray-200 text-gray-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">5</span>
+                                <h4 class="font-medium text-secondary hover:text-primary transition-colors line-clamp-2">
+                                    <a href="#">展会营销：提升参展效果的10个实用技巧</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 广告 -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow mb-8">
+                        <div class="p-1 bg-primary/10">
+                            <p class="text-center text-primary text-xs font-medium">广告</p>
+                        </div>
+                        <a href="#">
+                            <img src="https://picsum.photos/id/1076/600/400" alt="2023中国国际展览展示技术与设备博览会" class="w-full h-auto">
+                        </a>
+                        <div class="p-4">
+                            <h4 class="font-medium text-secondary mb-2">2023中国国际展览展示技术与设备博览会</h4>
+                            <p class="text-gray-600 text-sm mb-3">
+                                时间：2023年11月10-12日<br>
+                                地点：上海新国际博览中心
+                            </p>
+                            <a href="#" class="text-primary text-sm font-medium hover:underline">
+                                了解详情 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅资讯 -->
+    <section class="section-padding bg-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">订阅行业资讯</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle mb-8">
+                    订阅我们的资讯推送，及时获取展览行业最新动态、展会信息和专业见解，把握市场机遇
+                </p>
+                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+                    <input type="email" placeholder="请输入您的邮箱地址" class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all hover-lift whitespace-nowrap">
+                        立即订阅
+                    </button>
+                </form>
+                <p class="text-gray-500 text-sm mt-4">
+                    我们尊重您的隐私，不会向第三方分享您的信息
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-14 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，为客户提供全方位的展览解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">业务范围</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-primary transition-colors">成功案例</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-primary transition-colors">行业资讯</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">业务范围</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#exhibition" class="text-gray-400 hover:text-primary transition-colors">展览展陈</a></li>
+                        <li><a href="services.html#signage" class="text-gray-400 hover:text-primary transition-colors">标牌工程</a></li>
+                        <li><a href="services.html#event" class="text-gray-400 hover:text-primary transition-colors">活动布置</a></li>
+                        <li><a href="services.html#cultural" class="text-gray-400 hover:text-primary transition-colors">文化墙</a></li>
+                        <li><a href="services.html#promotion" class="text-gray-400 hover:text-primary transition-colors">宣传导视</a></li>
+                        <li><a href="services.html#equipment" class="text-gray-400 hover:text-primary transition-colors">设备器材</a></li>
+                        <li><a href="services.html#brand" class="text-gray-400 hover:text-primary transition-colors">形象墙</a></li>
+                        <li><a href="services.html#storefront" class="text-gray-400 hover:text-primary transition-colors">店面厨窗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-888-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">45025075@qq.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 福州佳势展览有限公司 版权所有 | 闽ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-light/95');
+                navbar.classList.add('bg-light');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-light/95');
+                navbar.classList.remove('bg-light');
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                    
+                    // 计算滚动位置（考虑固定导航栏高度）
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 评论提交处理
+        const commentButton = document.querySelector('button:contains("发表评论")');
+        if (commentButton) {
+            commentButton.addEventListener('click', () => {
+                const commentInput = document.querySelector('textarea[placeholder="请输入您的评论..."]');
+                if (commentInput && commentInput.value.trim() !== '') {
+                    alert('评论发表成功，感谢您的参与！');
+                    commentInput.value = '';
+                } else {
+                    alert('请输入评论内容后再提交');
+                }
+            });
+        }
+        
+        // 复制链接功能
+        const copyButton = document.querySelector('.fa-copy').parentElement;
+        if (copyButton) {
+            copyButton.addEventListener('click', () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    // 显示复制成功的反馈
+                    const originalIcon = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fa fa-check"></i>';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalIcon;
+                    }, 2000);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

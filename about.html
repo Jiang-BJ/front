@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 福州佳势展览有限公司</title>
+    <meta name="description" content="福州佳势展览有限公司成立于2008年，是专业的展览服务企业，拥有15年行业经验，提供展览设计、展台搭建等一站式服务，实力雄厚，值得信赖。">
+    <meta name="keywords" content="福州佳势展览,展览公司简介,佳势展览团队,展览服务经验,展览资质荣誉">
+    <!-- 引入外部资源 -->
+    <script src="csjs/tailwindcss.js"></script>
+    <link href="csjs/awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!--<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script> -->
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9CB93B',
+                        secondary: '#333333',
+                        accent: '#F5F5F5',
+                        light: '#FFFFFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -31px;
+                top: 0;
+                height: 100%;
+                width: 2px;
+                background-color: #9CB93B;
+            }
+            .timeline-item::after {
+                content: '';
+                position: absolute;
+                left: -37px;
+                top: 5px;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: #9CB93B;
+                border: 3px solid #F5F5F5;
+            }
+            .timeline-item:first-child::before {
+                top: 50%;
+                height: 50%;
+            }
+            .timeline-item:last-child::before {
+                height: 50%;
+            }
+            .hover-lift {
+                @apply hover:-translate-y-1 transition-all duration-300;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+            }
+            .section-padding {
+                @apply py-20;
+            }
+            .section-title {
+                @apply text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-secondary mb-4;
+            }
+            .section-subtitle {
+                @apply text-gray-600 max-w-3xl mx-auto;
+            }
+            .section-divider {
+                @apply w-20 h-1 bg-primary mx-auto mb-6;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-light/95 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-12 md:h-14">
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary font-medium hover:text-primary transition-colors">首页</a>
+                    <a href="about.html" class="text-primary font-medium hover:text-primary/80 transition-colors">关于我们</a>
+                    <a href="services.html" class="text-secondary font-medium hover:text-primary transition-colors">业务范围</a>
+                    <a href="cases.html" class="text-secondary font-medium hover:text-primary transition-colors">成功案例</a>
+                    <a href="news.html" class="text-secondary font-medium hover:text-primary transition-colors">行业资讯</a>
+                    <a href="contact.html" class="text-secondary font-medium hover:text-primary transition-colors">联系我们</a>
+                </nav>
+                
+                <!-- 联系电话 -->
+                <div class="hidden md:flex items-center text-secondary">
+                    <i class="fa fa-phone-square text-primary mr-2 text-xl"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-secondary text-2xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-light border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html" class="block py-2 text-secondary hover:text-primary transition-colors">首页</a>
+                <a href="about.html" class="block py-2 text-primary font-medium">关于我们</a>
+                <a href="services.html" class="block py-2 text-secondary hover:text-primary transition-colors">业务范围</a>
+                <a href="cases.html" class="block py-2 text-secondary hover:text-primary transition-colors">成功案例</a>
+                <a href="news.html" class="block py-2 text-secondary hover:text-primary transition-colors">行业资讯</a>
+                <a href="contact.html" class="block py-2 text-secondary hover:text-primary transition-colors">联系我们</a>
+                <div class="flex items-center pt-2 text-secondary border-t">
+                    <i class="fa fa-phone-square text-primary mr-2"></i>
+                    <span class="font-medium">400-888-9999</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="bg-primary/10 py-24 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-[clamp(2rem,4vw,3rem)] font-bold text-secondary mb-4">关于我们</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，
+                    15年行业经验，为客户提供全方位的展览解决方案
+                </p>
+                <div class="flex justify-center mt-8">
+                    <nav class="flex text-sm" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-primary">
+                                    <i class="fa fa-home mr-2"></i>
+                                    首页
+                                </a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                                    <span class="text-primary">关于我们</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">公司简介</span>
+                    <h2 class="section-title">专业展览服务提供商</h2>
+                    <div class="w-16 h-1 bg-primary mb-6"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        福州佳势展览有限公司成立于2008年，是福建省内知名的展览服务企业。公司专注于展览展示设计、
+                        展台搭建、展厅装修、活动策划等业务，服务领域涵盖各类展会、企业活动、品牌推广等。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        15年来，我们始终坚持"以客户为中心，以质量求生存，以创新谋发展"的经营理念，
+                        凭借专业的设计团队、先进的生产设备和丰富的施工经验，为国内外众多知名企业提供了
+                        高质量的展览服务，赢得了客户的一致好评。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        我们拥有3000平方米的现代化生产基地，配备了先进的生产设备和专业的技术人员，
+                        能够满足各类展览展示项目的制作需求。同时，我们建立了完善的服务体系，从前期咨询、
+                        方案设计到后期制作、现场搭建和售后服务，为客户提供一站式的展览解决方案。
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-check text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary">专业团队</h4>
+                                <p class="text-gray-600 text-sm">资深设计师和技术人员</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-star text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary">优质服务</h4>
+                                <p class="text-gray-600 text-sm">一站式全程服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://picsum.photos/id/1048/600/800" alt="佳势展览办公环境" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <img src="https://picsum.photos/id/1059/600/400" alt="佳势展览制作工厂" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://picsum.photos/id/1058/600/400" alt="佳势展览团队" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                        <img src="https://picsum.photos/id/1057/600/800" alt="佳势展览项目现场" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-all">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">发展历程</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    15年的发展历程，见证了佳势展览的成长与蜕变，每一步都凝聚着我们的努力与汗水，
+                    也离不开客户的信任与支持。
+                </p>
+            </div>
+            
+            <div class="relative pl-10 md:pl-0">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary transform -translate-x-1/2"></div>
+                
+                <!-- 时间线项目 -->
+                <div class="relative timeline-item mb-12 md:mb-24">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-md mb-3">2008年</span>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">公司成立</h3>
+                            <p class="text-gray-600">
+                                福州佳势展览有限公司正式成立，初期团队仅有5人，主要从事小型展台设计与搭建业务。
+                            </p>
+                        </div>
+                        
+                        <div class="hidden md:block md:w-2/12 flex justify-center">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
+                                <i class="fa fa-flag text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-5/12 md:pl-8">
+                            <img src="https://picsum.photos/id/1071/600/400" alt="2008年公司成立" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12 md:mb-24">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right order-1 md:order-1">
+                            <img src="https://picsum.photos/id/1072/600/400" alt="2012年扩大规模" class="w-full h-auto rounded-lg shadow-md md:ml-auto">
+                        </div>
+                        
+                        <div class="hidden md:block md:w-2/12 flex justify-center order-2">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
+                                <i class="fa fa-building text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-5/12 md:pl-8 order-2 md:order-3">
+                            <span class="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-md mb-3">2012年</span>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">扩大规模</h3>
+                            <p class="text-gray-600">
+                                公司规模扩大，团队增至20人，建成1000平方米生产基地，业务范围扩展至整个福建省。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12 md:mb-24">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-md mb-3">2016年</span>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">品牌升级</h3>
+                            <p class="text-gray-600">
+                                公司进行品牌升级，完善服务体系，开始为知名企业提供展览服务，年营业额突破千万。
+                            </p>
+                        </div>
+                        
+                        <div class="hidden md:block md:w-2/12 flex justify-center">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
+                                <i class="fa fa-star text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-5/12 md:pl-8">
+                            <img src="https://picsum.photos/id/1073/600/400" alt="2016年品牌升级" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item mb-12 md:mb-24">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right order-1 md:order-1">
+                            <img src="https://picsum.photos/id/1074/600/400" alt="2020年全国布局" class="w-full h-auto rounded-lg shadow-md md:ml-auto">
+                        </div>
+                        
+                        <div class="hidden md:block md:w-2/12 flex justify-center order-2">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
+                                <i class="fa fa-globe text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-5/12 md:pl-8 order-2 md:order-3">
+                            <span class="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-md mb-3">2020年</span>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">全国布局</h3>
+                            <p class="text-gray-600">
+                                公司业务向全国拓展，在上海、广州设立分支机构，服务客户超过500家，完成项目1000多个。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item">
+                    <div class="md:flex md:items-center md:justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-md mb-3">至今</span>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">持续发展</h3>
+                            <p class="text-gray-600">
+                                公司团队规模达到50人，生产基地扩大至3000平方米，成为华东地区知名的展览服务企业，
+                                持续为客户提供高质量的展览解决方案。
+                            </p>
+                        </div>
+                        
+                        <div class="hidden md:block md:w-2/12 flex justify-center">
+                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center z-10">
+                                <i class="fa fa-rocket text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-5/12 md:pl-8">
+                            <img src="https://picsum.photos/id/1075/600/400" alt="至今持续发展" class="w-full h-auto rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心团队 -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">核心团队</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    我们拥有一支经验丰富、创意独到、执行力强的专业团队，
+                    他们是佳势展览的核心力量，也是为客户提供优质服务的保证。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 团队成员1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://picsum.photos/id/1012/600/800" alt="张明 - 创始人兼总经理" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1 text-secondary">张明</h3>
+                        <p class="text-primary mb-3">创始人兼总经理</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            拥有20年展览行业经验，曾服务于多家知名展览公司，
+                            2008年创立佳势展览，负责公司整体战略规划和运营管理。
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 团队成员2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://picsum.photos/id/1000/600/800" alt="李婷 - 设计总监" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1 text-secondary">李婷</h3>
+                        <p class="text-primary mb-3">设计总监</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            毕业于中央美术学院，15年展览设计经验，
+                            擅长将品牌理念与空间设计相结合，创造独特的展览体验。
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 团队成员3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://picsum.photos/id/1074/600/800" alt="王强 - 工程总监" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1 text-secondary">王强</h3>
+                        <p class="text-primary mb-3">工程总监</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            18年展览工程管理经验，熟悉各种搭建材料和工艺，
+                            确保每个项目都能高质量、高效率地完成。
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 团队成员4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift card-shadow group">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://picsum.photos/id/1062/600/800" alt="陈静 - 客户总监" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold mb-1 text-secondary">陈静</h3>
+                        <p class="text-primary mb-3">客户总监</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            12年客户服务经验，深入了解客户需求，
+                            为客户提供专业的咨询和解决方案，确保客户满意度。
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业理念 -->
+    <section class="section-padding bg-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">企业理念</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    我们的企业理念是公司发展的灵魂，指导着我们的行为和决策，
+                    也是我们为客户提供优质服务的基础。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 理念1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-heart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">客户至上</h3>
+                    <p class="text-gray-600">
+                        我们始终将客户需求放在首位，深入了解客户的业务和目标，
+                        为客户提供最适合的解决方案，努力超越客户期望，实现与客户的长期合作。
+                    </p>
+                </div>
+                
+                <!-- 理念2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">创新进取</h3>
+                    <p class="text-gray-600">
+                        我们鼓励创新思维，关注行业最新趋势和技术，不断学习和进步，
+                        在设计理念、材料应用和施工工艺上勇于创新，为客户提供更具竞争力的服务。
+                    </p>
+                </div>
+                
+                <!-- 理念3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-check-circle text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">精益求精</h3>
+                    <p class="text-gray-600">
+                        我们注重细节，追求卓越品质，从设计到施工的每个环节都严格把控，
+                        确保每个项目都能完美呈现，为客户创造最大价值。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉资质 -->
+    <section class="section-padding bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">荣誉资质</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    多年来，我们凭借专业的服务和良好的信誉，获得了行业和客户的认可，
+                    这些荣誉是对我们工作的肯定，也是我们继续前进的动力。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/101/400/200" alt="福建省展览行业协会会员单位" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/102/400/200" alt="中国展览馆协会会员" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/103/400/200" alt="AAA级信用企业" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/104/400/200" alt="最佳展览设计奖" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/105/400/200" alt="优质工程奖" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/106/400/200" alt="守合同重信用企业" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/107/400/200" alt="创新设计奖" class="max-h-32 max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover-lift card-shadow flex items-center justify-center">
+                    <img src="https://picsum.photos/id/108/400/200" alt="客户满意单位" class="max-h-32 max-w-full object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系咨询 -->
+    <section class="section-padding bg-accent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title">携手合作，共创未来</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle mb-10">
+                    无论您有任何展览展示需求，我们都将为您提供专业的解决方案，
+                    期待与您携手合作，共同创造更多价值。
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        联系我们
+                    </a>
+                    <a href="services.html" class="bg-white hover:bg-gray-50 text-secondary border border-gray-300 font-medium px-8 py-3 rounded-md transition-all hover-lift">
+                        了解服务
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="https://www.jas-expo.com/images/logo.png" alt="福州佳势展览有限公司logo" class="h-14 mb-6">
+                    <p class="text-gray-400 mb-6">
+                        福州佳势展览有限公司是一家集展览展示设计、制作、搭建于一体的专业展览服务企业，为客户提供全方位的展览解决方案。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-youtube-play text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">关于我们</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">业务范围</a></li>
+                        <li><a href="cases.html" class="text-gray-400 hover:text-primary transition-colors">成功案例</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-primary transition-colors">行业资讯</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">业务范围</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html#exhibition" class="text-gray-400 hover:text-primary transition-colors">展览展陈</a></li>
+                        <li><a href="services.html#signage" class="text-gray-400 hover:text-primary transition-colors">标牌工程</a></li>
+                        <li><a href="services.html#event" class="text-gray-400 hover:text-primary transition-colors">活动布置</a></li>
+                        <li><a href="services.html#cultural" class="text-gray-400 hover:text-primary transition-colors">文化墙</a></li>
+                        <li><a href="services.html#promotion" class="text-gray-400 hover:text-primary transition-colors">宣传导视</a></li>
+                        <li><a href="services.html#equipment" class="text-gray-400 hover:text-primary transition-colors">设备器材</a></li>
+                        <li><a href="services.html#brand" class="text-gray-400 hover:text-primary transition-colors">形象墙</a></li>
+                        <li><a href="services.html#storefront" class="text-gray-400 hover:text-primary transition-colors">店面厨窗</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系我们</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">福建省福州市仓山区浦上大道276号仓山万达C区1#楼17层</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">400-888-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">45025075@qq.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o text-primary mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 福州佳势展览有限公司 版权所有 | 闽ICP备XXXXXXXX号
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-500 hover:text-primary text-sm transition-colors">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all z-50">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('py-2', 'shadow');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.replace('fa-times', 'fa-bars');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
